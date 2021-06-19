@@ -1,6 +1,6 @@
 This code is for use in creating wav file recordings. It is taken from https://github.com/atomic14/esp32_sdcard_audio/.  I'm following Atomic14's great tutorials and doing some experimenting. I am using this device to build a library of audio clips for later use in training a trigger word (wake word) detector.
 
-**How to use: ** 
+**How to use:** 
 
 - Once build you record audio clips by holding down the button.  When the button is released it saves the file as "testN.wav" where N is incremented each time you press the button (test1.wav, test2.wav, etc).
 - Then you pull out the microSD card and move the files wherever you want.
