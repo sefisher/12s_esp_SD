@@ -20,13 +20,13 @@ This code is for use in creating wav file recordings. It is taken from https://g
 
 I used this ESP32: https://www.amazon.com/HiLetgo-ESP-WROOM-32-Development-Microcontroller-Integrated/dp/B0718T232Z/; which has this pin out:
 
-![](D:\Documents\PlatformIO\Projects\12s_esp_SD\myESP32pinout.png)
+![](myESP32pinout.png)
 
 I used this INMP I2S mic board: https://www.amazon.com/DAOKI-Omnidirectional-Microphone-Interface-Precision/dp/B0821521CV/
 
 Here is the circuit:
 
-![](D:\Documents\PlatformIO\Projects\12s_esp_SD\I2S_record_to_SD_using_ESP_circuit.png)
+![](I2S_record_to_SD_using_ESP_circuit.png)
 
 <u>***COMPILING SOFTWARE:***</u>
 
