@@ -32,7 +32,7 @@
 #define I2S_SPEAKER_SERIAL_DATA GPIO_NUM_35
 
 // record button
-#define GPIO_BUTTON GPIO_NUM_19
+#define GPIO_BUTTON GPIO_NUM_32
 
 // sdcard
 #define PIN_NUM_MISO GPIO_NUM_16

@@ -14,7 +14,7 @@
 int fileCount;
 void wait_for_button_push()
 {
-  while (gpio_get_level(GPIO_BUTTON) == 0)
+  while (gpio_get_level(GPIO_BUTTON) == 1)
   {
     vTaskDelay(pdMS_TO_TICKS(100));
   }
@@ -30,7 +30,7 @@ void record(I2SSampler *input, const char *fname)
   // create a new wave file writer
   WAVFileWriter *writer = new WAVFileWriter(fp, input->sample_rate());
   // keep writing until the user releases the button
-  while (gpio_get_level(GPIO_BUTTON) == 1)
+  while (gpio_get_level(GPIO_BUTTON) == 0)
   {
     int samples_read = input->read(samples, 1024);
     int64_t start = esp_timer_get_time();
@@ -104,7 +104,7 @@ void main_task(void *param)
 #endif
 
   gpio_set_direction(GPIO_BUTTON, GPIO_MODE_INPUT);
-  gpio_set_pull_mode(GPIO_BUTTON, GPIO_PULLDOWN_ONLY);
+  gpio_set_pull_mode(GPIO_BUTTON, GPIO_PULLUP_ONLY);
 
   while (true)
   {
